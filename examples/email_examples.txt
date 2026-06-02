@@ -1,0 +1,83 @@
+EMAIL WRITER EXAMPLES
+=====================
+
+These examples show how to call the write_email() method directly
+or trigger it through the interactive CLI.
+
+--------------------------------------------------------------
+Example 1 — Formal stakeholder email (no research)
+--------------------------------------------------------------
+assistant.write_email(
+    purpose="Announce Q2 2026 sales results. Total revenue was PKR 12.5 million, "
+            "a 28% increase compared to Q1 2026.",
+    recipient="stakeholder",
+    tone="formal"
+)
+
+Expected output structure:
+    Subject: Q2 2026 Sales Performance Update
+
+    Dear [Stakeholder Name],
+
+    I am pleased to share our Q2 2026 performance results...
+    [3-4 paragraphs covering results, context, and outlook]
+
+    Best regards,
+    [Your Name]
+    CEO, [Company Name]
+
+--------------------------------------------------------------
+Example 2 — Friendly client email with market research
+--------------------------------------------------------------
+assistant.write_email(
+    purpose="Introduce our new AI-powered inventory management software "
+            "to potential retail clients.",
+    recipient="client",
+    tone="friendly",
+    research_topic="AI adoption in retail and supply chain 2026"
+)
+
+What happens internally:
+    1. web_search("AI adoption in retail and supply chain 2026") is called
+    2. Relevant statistics are incorporated into the email body
+    3. Full email is returned with research-backed content
+
+--------------------------------------------------------------
+Example 3 — Professional team email
+--------------------------------------------------------------
+assistant.write_email(
+    purpose="Announce the new hybrid work policy effective June 1, 2026. "
+            "Employees may work remotely up to 3 days per week.",
+    recipient="team",
+    tone="professional"
+)
+
+--------------------------------------------------------------
+Example 4 — Formal supplier email
+--------------------------------------------------------------
+assistant.write_email(
+    purpose="Request an extension on payment terms from Net-30 to Net-45 "
+            "due to increased operational costs this quarter.",
+    recipient="supplier",
+    tone="formal"
+)
+
+--------------------------------------------------------------
+Example 5 — Friendly investor update
+--------------------------------------------------------------
+assistant.write_email(
+    purpose="Monthly investor update: user growth up 40%, revenue on track, "
+            "new enterprise deal signed with a Fortune 500 company.",
+    recipient="investor",
+    tone="professional",
+    research_topic="startup growth benchmarks 2026"
+)
+
+--------------------------------------------------------------
+CLI usage
+--------------------------------------------------------------
+Select option: 1
+  Purpose        : Announce new product launch for our SaaS platform
+  Recipient type : client
+  Tone           : friendly
+  Research topic : SaaS market trends 2026
