@@ -338,5 +338,3 @@ add a secret named `groq`, and paste your key as the value.
   feature based on keyword detection.
 
 ---
-
-*Built for atomcamp Agentic AI Bootcamp — Weekly Project Assignment*
